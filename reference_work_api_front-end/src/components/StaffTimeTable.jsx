@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 
 const StaffTimeTable = () => {
   const [data, setData] = useState("");
@@ -12,7 +13,7 @@ const StaffTimeTable = () => {
     setLoading(false);
   }, []);
 
-  return <div>StaffTimeTable {JSON.stringify(data)} </div>;
+  return <div> <Link to="/">Home</Link> <h1>StaffTimeTable</h1> {JSON.stringify(data)}</div>;
 };
 
 export default StaffTimeTable;
