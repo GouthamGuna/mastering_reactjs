@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+//import { Link } from "react-router-dom";
 
 const StaffTimeTable = () => {
   const [data, setData] = useState("");
@@ -13,7 +13,14 @@ const StaffTimeTable = () => {
     setLoading(false);
   }, []);
 
-  return <div> <Link to="/">Home</Link> <h1>StaffTimeTable</h1> {JSON.stringify(data)}</div>;
+  return (
+    <div>
+      <h1>StaffTimeTable</h1>
+      {/* <Link to="/">Home</Link>
+      <Link to="/file-data-reader">File-Data-Reader</Link> */}
+      {JSON.stringify(data)}
+    </div>
+  );
 };
 
 export default StaffTimeTable;
