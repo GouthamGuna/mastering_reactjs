@@ -5,7 +5,7 @@ const Navbar = () => {
   const navLinkStyles = ({ isActive }) => {
     return {
       fontWeight: isActive ? "bold" : "normal",
-      textDecoration: isActive ? "none" : "underline",
+      textDecoration: isActive ? "none" : "none",
     };
   };
 
@@ -14,11 +14,11 @@ const Navbar = () => {
       <NavLink style={navLinkStyles} to="/">
         Home
       </NavLink>
-      <NavLink style={navLinkStyles} to="/staffTimeSheets">
+      <NavLink style={navLinkStyles} to="/staff-time-sheets">
         Staff Time Sheets
       </NavLink>
       <NavLink style={navLinkStyles} to="/file-data-reader">
-        File-Data-Reade
+        File-Data-Reader
       </NavLink>
     </nav>
   );
