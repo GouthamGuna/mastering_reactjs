@@ -12,12 +12,15 @@ const Navbar = () => {
   return (
     <nav className="primary-nav">
       <NavLink style={navLinkStyles} to="/">
-        Home
+        Logout
       </NavLink>
-      <NavLink style={navLinkStyles} to="/staff-time-sheets">
+      <NavLink style={navLinkStyles} to="/dashboard/teacher-class-teacher">
+        Teacher Class Teacher
+      </NavLink>
+      <NavLink style={navLinkStyles} to="/dashboard/staff-time-sheets">
         Staff Time Sheets
       </NavLink>
-      <NavLink style={navLinkStyles} to="/file-data-reader">
+      <NavLink style={navLinkStyles} to="/dashboard/file-data-reader">
         File-Data-Reader
       </NavLink>
     </nav>
