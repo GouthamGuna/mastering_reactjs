@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 D:/work/remote_repo/react_learnedness/min_pro/sudoku_solver/app.js
 
+https://www.codeproject.com/Questions/5328335/After-login-condition-passed-not-redirect-to-dashb
+
 ## Available Scripts
 
 In the project directory, you can run:
