@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+D:/work/remote_repo/react_learnedness/min_pro/sudoku_solver/app.js
+
 ## Available Scripts
 
 In the project directory, you can run:
