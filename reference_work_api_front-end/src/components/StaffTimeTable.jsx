@@ -1,4 +1,6 @@
 import { React, useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
+
 //import { Link } from "react-router-dom";
 
 const StaffTimeTable = () => {
@@ -19,6 +21,7 @@ const StaffTimeTable = () => {
       {/* <Link to="/">Home</Link>
       <Link to="/file-data-reader">File-Data-Reader</Link> */}
       {JSON.stringify(data)}
+      <Outlet />
     </div>
   );
 };

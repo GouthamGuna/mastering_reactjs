@@ -1,11 +1,8 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { useForm } from "react-hook-form";
-import styles from "./styles.css";
 import { useNavigate } from "react-router-dom";
-//import Navbar from "../../components/Navbar";
 
 const LoginPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   const {
@@ -17,13 +14,8 @@ const LoginPage = () => {
   const onSubmit = (data) => {
     console.log("data: ", data);
 
-    if (data.email == "gowtham@gmsk.in" && data.password == "admin@gmsk") {
-      console.log("login successed!");
-      setIsLoggedIn(true);
-      navigate("/dashboard")
-    } else {
-      console.log("incorrect password and username!");
-      isLoggedIn(false);
+    if (data.email === "gowtham@gmsk.in" && data.password === "admin@gmsk") {
+      navigate("/dashboard/home");
     }
   };
 

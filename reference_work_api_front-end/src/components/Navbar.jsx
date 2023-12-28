@@ -14,7 +14,7 @@ const Navbar = () => {
       <NavLink style={navLinkStyles} to="/">
         Logout
       </NavLink>
-      <NavLink style={navLinkStyles} to="/dashboard/teacher-class-teacher">
+      <NavLink style={navLinkStyles} to="/dashboard/home">
         Teacher Class Teacher
       </NavLink>
       <NavLink style={navLinkStyles} to="/dashboard/staff-time-sheets">
