@@ -7,6 +7,7 @@ import TeacherClassTeacher from "./components/TeacherClassTeacher";
 import FileDataReader from "./components/FileDataReader";
 import PageNotFound from "./pages/PageNotFound";
 import LoginPage from "./pages/login_page/LoginPage";
+import FileUpload from "./components/FileUpload";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="home" element={<TeacherClassTeacher />} />
             <Route path="staff-time-sheets" element={<StaffTimeTable />} />
             <Route path="file-data-reader" element={<FileDataReader />} />
+            <Route path="files-upload" element={<FileUpload />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
