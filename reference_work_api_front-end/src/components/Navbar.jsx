@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Outlet } from "react-router-dom"
 
 const Navbar = () => {
   const navLinkStyles = ({ isActive }) => {
@@ -10,6 +11,7 @@ const Navbar = () => {
   };
 
   return (
+    <>
     <nav className="primary-nav">
       <NavLink style={navLinkStyles} to="/">
         Logout
@@ -23,7 +25,12 @@ const Navbar = () => {
       <NavLink style={navLinkStyles} to="/dashboard/file-data-reader">
         File-Data-Reader
       </NavLink>
+      <NavLink style={navLinkStyles} to="/dashboard/files-upload">
+        Files`s Upload
+      </NavLink>
     </nav>
+    <Outlet />
+    </>
   );
 };
 
