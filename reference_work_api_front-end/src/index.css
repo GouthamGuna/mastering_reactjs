@@ -16,6 +16,14 @@ nav a {
   margin-right: 16px;
 }
 
+.student-reg{
+  padding: 30px 52px;
+}
+
+.sr-feilds {
+  padding: 5px 5px;
+}
+
 .file-reader-submit-btn{
   border-color: greenyellow;  
 }
