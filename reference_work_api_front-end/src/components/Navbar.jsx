@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
 
 const Navbar = () => {
   const navLinkStyles = ({ isActive }) => {
@@ -12,24 +12,27 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className="primary-nav">
-      <NavLink style={navLinkStyles} to="/">
-        Logout
-      </NavLink>
-      <NavLink style={navLinkStyles} to="/dashboard/home">
-        Teacher Class Teacher
-      </NavLink>
-      <NavLink style={navLinkStyles} to="/dashboard/staff-time-sheets">
-        Staff Time Sheets
-      </NavLink>
-      <NavLink style={navLinkStyles} to="/dashboard/file-data-reader">
-        File-Data-Reader
-      </NavLink>
-      <NavLink style={navLinkStyles} to="/dashboard/files-upload">
-        Files`s Upload
-      </NavLink>
-    </nav>
-    <Outlet />
+      <nav className="primary-nav">
+        <NavLink style={navLinkStyles} to="/">
+          Logout
+        </NavLink>
+        <NavLink style={navLinkStyles} to="/dashboard/home">
+          Teacher Class Teacher
+        </NavLink>
+        <NavLink style={navLinkStyles} to="/dashboard/staff-time-sheets">
+          Staff Time Sheets
+        </NavLink>
+        <NavLink style={navLinkStyles} to="/dashboard/file-data-reader">
+          File-Data-Reader
+        </NavLink>
+        <NavLink style={navLinkStyles} to="/dashboard/student-registration">
+          Student Registration
+        </NavLink>
+        <NavLink style={navLinkStyles} to="/dashboard/files-upload">
+          Files`s Upload
+        </NavLink>
+      </nav>
+      <Outlet />
     </>
   );
 };
