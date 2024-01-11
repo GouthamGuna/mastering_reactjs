@@ -6,7 +6,7 @@ import axios from "axios";
 const TeacherClassTeacher = () => {
   const staffNameLists = ["Saran", "Gowtham", "Jay Kumar", "Manoj"];
   const [staffName, setStaffName] = useState("Saran");
-  const [staffDBData, setStaffDBData] = useState("");
+  const [staffDBData, setStaffDBData] = useState([]);
   const [error, setError] = useState(null);
 
   // const options = [
@@ -23,7 +23,8 @@ const TeacherClassTeacher = () => {
     axios
       .get(base_URL)
       .then((response) => {
-        setStaffDBData(response);
+        setStaffDBData(response.data);
+        //setStaffDBData(staffDBData.concat (response.data))
       })
       .catch((error) => {
         setError(error);
@@ -31,8 +32,6 @@ const TeacherClassTeacher = () => {
   }, []);
 
   /* Axios GET Request Ending Here! */
-
-  console.log(staffDBData.data);
 
   if (error) return `Error: ${error.message}`;
 
@@ -57,10 +56,6 @@ const TeacherClassTeacher = () => {
                   {staffNameLists.map((stafflists, _index) => (
                     <option key={_index}>{stafflists}</option>
                   ))}
-
-                  {/* {staffList.map((staffId, staffName) => {
-                (<option key={staffId}>{staffName}</option>)}
-            )} */}
                 </select>
               </label>
             </th>
@@ -68,16 +63,17 @@ const TeacherClassTeacher = () => {
               <label>
                 Staff List From DB :{" "}
                 <select
-                  value=""
                   className="staff-list-from-db"
                   name="staff-list-from-db"
-                ></select>
-                {/* {staffDBData.data.map((staffNames, _staffId) => { 
-                <option key={_staffId}>{staffNames}</option>
-                })} */}
+                  value={staffDBData}
+                  //onChange={(e) => setStaffDBData(e.target.value)}
+                >
+                  {staffDBData.map((e) => {
+                    <option key={e.staffId}>{e.staffName}</option>;
+                  })}
+                </select>
               </label>
             </th>
-
             {/* <th>
               <label>
                 Another One Example : <Select options={options} />
